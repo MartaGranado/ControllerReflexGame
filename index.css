@@ -3,132 +3,114 @@ body {
     text-align: center;
     background-color: #d3badc;
     margin: 0;
-    padding: 0;
-  }
-
-  #languageSelector {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 8px;
-  }
-
-  #menu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    gap: 20px;
-    background-color: #d3badc;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Ensure the body takes up the full height */
+    box-sizing: border-box;
   }
-
-  #menu h1 {
-    font-size: 48px;
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
   }
-
-  #menu button {
-    padding: 20px 40px;
+  
+  h2 {
     font-size: 24px;
-    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /* Two columns of buttons */
+    grid-template-rows: repeat(2, 200px); /* Two rows of buttons */
+    gap: 20px; /* Adjust spacing between buttons */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    color: white;
-  }
-
-  #menu button.easy {
-    background-color: #28a745;
-  }
-
-  #menu button.hard {
-    background-color: #dc3545;
-  }
-
-  #menu button:hover {
-    opacity: 0.8;
-  }
-
-  #game {
-    display: none;
-  }
-
-  #buttonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: lightgray;
-    position: relative;
-    margin: 20px auto;
-  }
-
-  .button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 24px;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    opacity: 0.5;
+    text-align: center;
   }
-
-  .easy #A {
-    background-color: green;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  
+  /* Platform colors */
+  .button.xbox {
+    background-color: #28a745; /* Verde */
   }
-
-  .easy #B {
-    background-color: red;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
+  
+  .button.play {
+    background-color: #007bff; /* Azul */
   }
-
-  .easy #X {
-    background-color: blue;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-  }
-
-  .easy #Y {
-    background-color: yellow;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .hard .button {
-    display: none;
-  }
-
-  .hard #targetButton {
-    display: flex;
-    font-size: 48px;
-    font-weight: bold;
+  
+  .button.keyboard {
+    background-color: #ffc107; /* Amarillo */
     color: black;
   }
-
-  #score,
-  #errors,
-  #timer {
-    font-size: 24px;
+  
+  .button.switch {
+    background-color: #dc3545; /* Rojo */
   }
 
-  #game button {
-    padding: 10px 20px;
+ #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    background-color: #6b4f7c;
+    color: white;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  #navbar a {
+    color: white;
+    text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #languageSelector {
+    margin-left: auto; 
+    margin-right: 3%; 
+    font-size: 16px;
+    padding: 5px 10px;
     border-radius: 8px;
+    border: none;
+  }
+   
+  #controllerStatus {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%;
+  }
+
+  #controllerStatus ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #controllerStatus li {
+    margin-bottom: 10px;
+  }
+
+  #controllerStatus h3 {
+    font-size: 24px;
     margin-bottom: 20px;
-    cursor: pointer;
   }

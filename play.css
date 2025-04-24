@@ -1,0 +1,185 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #aeecec; /* Same background color as in the original code */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the body takes up the full height of the screen */
+  box-sizing: border-box;
+}
+
+#languageSelector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #aeecec; /* Same background color as in the original code */
+  position: relative;
+  top: 0;
+}
+
+#menu h1 {
+  font-size: 48px; /* Consistent with the original code */
+}
+
+#menu button {
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+}
+
+#menu button.easy {
+  background-color: #28a745; /* Same color for 'easy' button */
+}
+
+#menu button.hard {
+  background-color: #dc3545; /* Same color for 'hard' button */
+}
+
+#menu button:hover {
+  opacity: 0.8;
+}
+
+#game {
+  display: none;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: lightgray;
+  position: relative;
+  margin: 20px auto;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.button#cross { background-color: #007bff; }    /* Azul */
+.button#circle { background-color: #ff4d4d; }   /* Rojo */
+.button#square { background-color: #8000ff; }   /* Púrpura */
+.button#triangle { background-color: #33cc33; } /* Verde */
+
+.easy #cross {
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.easy #circle {
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.easy #square {
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.easy #triangle {
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hard .button {
+  display: none;
+}
+
+.hard #targetButton {
+  display: flex;
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+}
+
+#score,
+#errors,
+#timer {
+  font-size: 24px;
+}
+
+#game button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #267d88;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Increased padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+#homeLink {
+  font-size: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2b6c80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  transform: scale(2);
+  margin-left: 1.1%;
+}
+
+#homeLink:hover {
+  background-color: #183861;
+}

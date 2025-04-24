@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e9b6b6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes up the full height of the screen */
+    box-sizing: border-box;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #e9b6b6;
+    position: relative; /* Make sure content is positioned correctly */
+    top: 0;
+}
+
+#menu h1 {
+    font-size: 48px;
+}
+
+#menu button {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+}
+
+#menu button.easy {
+    background-color: #28a745;
+}
+
+#menu button.hard {
+    background-color: #dc3545;
+}
+
+#menu button:hover {
+    opacity: 0.8;
+}
+
+#game {
+    display: none;
+    position: relative;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: lightgray;
+    position: relative;
+    margin: 20px auto;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.easy #A {
+    background-color: green;
+    top: 50%; /* Moverlo al lado derecho */
+    left: 75%; /* Moverlo a la derecha */
+    transform: translate(-50%, -50%);
+}
+
+.easy #B {
+    background-color: red;
+    top: 75%; /* Moverlo abajo */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);
+}
+
+.easy #X {
+    background-color: blue;
+    top: 25%; /* Moverlo arriba */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);
+}
+
+.easy #Y {
+    background-color: yellow;
+    top: 50%; /* Moverlo a la izquierda */
+    left: 25%; /* Moverlo a la izquierda */
+    transform: translate(-50%, -50%);
+}
+
+
+.hard .button {
+    display: none;
+}
+
+.hard #targetButton {
+    display: flex;
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+}
+
+#score,
+#errors,
+#timer {
+    font-size: 24px;
+}
+
+#game button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #be4242;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Increased padding for better spacing */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#languageSelector {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 5%;
+}
+
+#homeLink {
+    font-size: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #cf2222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    transform: scale(2);
+    margin-left: 1.1%;
+}
+
+#homeLink:hover {
+    background-color: #a51414;
+}
