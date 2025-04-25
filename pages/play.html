@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayStation reflex</title>
+  <link rel="stylesheet" href="../styles/play.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+</head>
+
+<nav id="navbar">
+  <a href="../index.html" id="homeLink">🎮</a>
+  <select id="languageSelector" onchange="changeLanguage(this.value)">
+    <option value="es" selected>Español</option>
+    <option value="en">English</option>
+  </select>
+</nav>
+
+<body>
+  <div id="menu">
+    <h1 id="title">Reflejos PlayStation</h1>
+    <button class="easy" onclick="startGame('easy')" id="easyBtn">Modo Fácil</button>
+    <button class="hard" onclick="startGame('hard')" id="hardBtn">Modo Difícil</button>
+  </div>
+
+  <div id="game">
+    <button onclick="goToMenu()" id="menuBtn">Menú</button>
+    <h1 id="gameTitle">Reflejos PlayStation</h1>
+    <div id="buttonContainer" class="easy">
+      <div id="cross" class="button">✕</div>
+      <div id="circle" class="button">〇</div>
+      <div id="square" class="button">☐</div>
+      <div id="triangle" class="button">△</div>
+      <div id="targetButton"></div>
+    </div>
+    <div id="score">Aciertos: 0</div>
+    <div id="errors">Errores: 0</div>
+    <div id="timer">Tiempo restante: 3.00s</div>
+  </div>
+
+  <script src="../Scripts/play.js" defer></script>
+</body>
+</html>
