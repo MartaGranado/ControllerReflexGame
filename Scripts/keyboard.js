@@ -93,12 +93,14 @@ function startGame(mode) {
                 handleFail(); // Incorrect key pressed
             }
         } else if (gameMode === 'hard') {
-            playerInput += keyPressed;
-
-            if (playerInput === currentSequence) {
-                handleSuccess();
-            } else if (playerInput.length > currentSequence.length) {
-                handleFail();
+            const expectedChar = currentSequence[playerInput.length];
+            if (keyPressed === expectedChar) {
+                playerInput += keyPressed;
+                if (playerInput === currentSequence) {
+                    handleSuccess();
+                }
+            } else {
+                handleFail(); // Immediately fail on wrong input
             }
         }
     };
